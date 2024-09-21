@@ -5,7 +5,8 @@ import { AiOutlineUpload } from 'react-icons/ai'
 import Loader from "../GeneralScreens/Loader";
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthContext';
-import '../../Css/EditProfile.css'
+import '../../Css/EditProfile.css';
+const url=process.env.url || `http://localhost:5000`;
 
 const EditProfile = () => {
     const { activeUser, config } = useContext(AuthContext)
@@ -119,7 +120,7 @@ const EditProfile = () => {
                                     <div class="absolute">
                                         Currently Image
                                     </div>
-                                    <img src={`http://localhost:5000/userPhotos/${previousPhoto}`} alt="userPhoto" />
+                                    <img src={`${url}/userPhotos/${previousPhoto}`} alt="userPhoto" />
                                 </div>
 
                             </div>
