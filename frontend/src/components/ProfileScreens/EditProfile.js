@@ -6,7 +6,7 @@ import Loader from "../GeneralScreens/Loader";
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthContext';
 import '../../Css/EditProfile.css';
-const url=process.env.URI || `http://localhost:5000`;
+const url=process.env.REACT_APP_URI || `http://localhost:5000`;
 
 const EditProfile = () => {
     const { activeUser, config } = useContext(AuthContext)
