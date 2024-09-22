@@ -17,8 +17,6 @@ const sendEmail = async (mailOptions) =>{
        
     })
 
-    console.log(transporter)
-
     let info = await transporter.sendMail(mailOptions) ; 
 
     console.log(`Message send : ${info.messageId}`)
